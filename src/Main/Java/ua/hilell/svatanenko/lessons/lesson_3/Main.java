@@ -7,5 +7,11 @@ public class Main {
         System.out.println("Hi dears");
         System.out.println("Hi dears");
         System.out.println("Hi dears");
+
+        System.out.println("Hi GitHub");
+        System.out.println("Hi GitHub");
+        System.out.println("Hi GitHub");
+        System.out.println("Hi GitHub");
     }
 }
+
