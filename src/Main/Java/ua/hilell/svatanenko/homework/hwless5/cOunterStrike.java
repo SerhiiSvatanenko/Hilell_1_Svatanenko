@@ -8,53 +8,71 @@ public class cOunterStrike {
         System.out.println("Введіть назву для Першої команди та натисніть Enter.");
         Scanner scanner = new Scanner(System.in);
         String teamName1 = scanner.nextLine();
+
         System.out.println("Введіть кількість отриманних фрагів кожним з 5ти гравців команди - ");
         System.out.println(teamName1 + " та натисніть Enter.");
         System.out.println("Після введення кількості фрагів для кожного гравця, натискай Enter");
-        Scanner scanner1 = new Scanner(System.in);
-        int fragUs1 = scanner1.nextInt();
-        Scanner scanner2 = new Scanner(System.in);
-        int fragUs2 = scanner2.nextInt();
-        Scanner scanner3 = new Scanner(System.in);
-        int fragUs3 = scanner3.nextInt();
-        Scanner scanner4 = new Scanner(System.in);
-        int fragUs4 = scanner4.nextInt();
-        Scanner scanner5 = new Scanner(System.in);
-        int fragUs5 = scanner5.nextInt();
+
+        double fragUs1 = 0;
+        double fragUs2 = 0;
+        double fragUs3 = 0;
+        double fragUs4 = 0;
+        double fragUs5 = 0;
+
+        if (scanner.hasNextInt()) {
+            fragUs1 = scanner.nextDouble();
+            fragUs2 = scanner.nextDouble();
+            fragUs3 = scanner.nextDouble();
+            fragUs4 = scanner.nextDouble();
+            fragUs5 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
 
         System.out.println("Чудово! Продовжимо. ");
         System.out.println("Введіть назву для Другої команди та натисніть Enter.");
-        Scanner scanner11 = new Scanner(System.in);
-        String teamName2 = scanner11.nextLine();
+        Scanner scanner1 = new Scanner(System.in);
+        String teamName2 = scanner1.nextLine();
+
         System.out.println("Введіть кількість отриманних фрагів кожним з 5ти гравців команди - ");
         System.out.println(teamName2 + " та натисніть Enter.");
         System.out.println("Після введення кількості фрагів для кожного гравця, натискай Enter");
-        Scanner scanner6 = new Scanner(System.in);
-        int fragUs6 = scanner6.nextInt();
-        Scanner scanner7 = new Scanner(System.in);
-        int fragUs7 = scanner7.nextInt();
-        Scanner scanner8 = new Scanner(System.in);
-        int fragUs8 = scanner8.nextInt();
-        Scanner scanner9 = new Scanner(System.in);
-        int fragUs9 = scanner9.nextInt();
-        Scanner scanner10 = new Scanner(System.in);
-        int fragUs10 = scanner10.nextInt();
 
-        int resultTeam1 = (fragUs1 + fragUs2 + fragUs3 + fragUs4 + fragUs5) / 5;
-        int resultTeam2 = (fragUs6 + fragUs7 + fragUs8 + fragUs9 + fragUs10) | 5;
+        double fragUs6 = 0;
+        double fragUs7 = 0;
+        double fragUs8 = 0;
+        double fragUs9 = 0;
+        double fragUs10 = 0;
+
+        if (scanner.hasNextInt()) {
+             fragUs6 = scanner.nextDouble();
+             fragUs7 = scanner.nextDouble();
+             fragUs8 = scanner.nextDouble();
+             fragUs9 = scanner.nextDouble();
+             fragUs10 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+
+        double resultTeam1 = (fragUs1 + fragUs2 + fragUs3 + fragUs4 + fragUs5) / 5;
+        double resultTeam2 =(fragUs6 + fragUs7 + fragUs8 + fragUs9 + fragUs10) / 5;
         System.out.println("Кількість балів у команди - " + teamName1 + " " + " " + resultTeam1 + ".");
         System.out.println("Кількість балів у команди - " + teamName2 + " " + " " + resultTeam2 + ".");
 
         // порівняння балів в командах
-        String teamName;
-        int result = 0;
+        String teamName = "someName";
+        double result = 0;
         if (resultTeam1 > resultTeam2) {
             result = resultTeam1;
             teamName = teamName1;
-
-        } else {
+        } else if (resultTeam1 < resultTeam2) {
             result = resultTeam2;
             teamName = teamName2;
+        } else {
+            System.out.println("Перемогла Дружба, бо кільсть балів у обох комманд однакова!");
+            System.exit(0);
         }
 
         System.out.println("Перемогла команда - " + teamName + " яка набрала - " + result + " балів.");
