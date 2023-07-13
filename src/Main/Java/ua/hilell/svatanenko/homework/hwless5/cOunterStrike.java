@@ -19,11 +19,31 @@ public class cOunterStrike {
         double fragUs4 = 0;
         double fragUs5 = 0;
 
-        if (scanner.hasNextInt()) {
+        if (scanner.hasNextDouble()) {
             fragUs1 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (scanner.hasNextDouble()) {
             fragUs2 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (scanner.hasNextDouble()) {
             fragUs3 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (scanner.hasNextDouble()) {
             fragUs4 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (scanner.hasNextDouble()) {
             fragUs5 = scanner.nextDouble();
         } else {
             System.out.println("Wrong data!");
@@ -45,19 +65,39 @@ public class cOunterStrike {
         double fragUs9 = 0;
         double fragUs10 = 0;
 
-        if (scanner.hasNextInt()) {
-             fragUs6 = scanner.nextDouble();
-             fragUs7 = scanner.nextDouble();
-             fragUs8 = scanner.nextDouble();
-             fragUs9 = scanner.nextDouble();
-             fragUs10 = scanner.nextDouble();
+        if (scanner.hasNextDouble()) {
+            fragUs6 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (scanner.hasNextDouble()) {
+            fragUs7 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (scanner.hasNextDouble()) {
+            fragUs8 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (scanner.hasNextDouble()) {
+            fragUs9 = scanner.nextDouble();
+        } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (scanner.hasNextDouble()) {
+            fragUs10 = scanner.nextDouble();
         } else {
             System.out.println("Wrong data!");
             System.exit(0);
         }
 
         double resultTeam1 = (fragUs1 + fragUs2 + fragUs3 + fragUs4 + fragUs5) / 5;
-        double resultTeam2 =(fragUs6 + fragUs7 + fragUs8 + fragUs9 + fragUs10) / 5;
+        double resultTeam2 = (fragUs6 + fragUs7 + fragUs8 + fragUs9 + fragUs10) / 5;
         System.out.println("Кількість балів у команди - " + teamName1 + " " + " " + resultTeam1 + ".");
         System.out.println("Кількість балів у команди - " + teamName2 + " " + " " + resultTeam2 + ".");
 
