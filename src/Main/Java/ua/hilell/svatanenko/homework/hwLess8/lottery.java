@@ -16,7 +16,7 @@ public class lottery {
         }
         System.out.println("Company Array - " + Arrays.toString(compArr));
 
-    // сортування масивів.
+        // сортування масивів, за спаданням.
         for (int i = 0; i < userArr.length - 1; i++) {
             for (int j = 0; j < userArr.length - 1; j++) {
                 if (userArr[j] < userArr[j + 1]) {
@@ -39,7 +39,7 @@ public class lottery {
         }
         System.out.println("Sort Company Array  - " + Arrays.toString(compArr));
 
-    // визначення кількості збігів.
+        // визначення кількості збігів.
         int consi = 0;
         for (int i = 0; i < userArr.length; i++) {
             if (userArr[i] == compArr[i]) {
@@ -47,6 +47,5 @@ public class lottery {
             }
         }
         System.out.println("Number of coincidence in 2 arrays - " + consi);
-
     }
 }
