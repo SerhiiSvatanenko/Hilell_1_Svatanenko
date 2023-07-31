@@ -10,18 +10,26 @@ public class Transpon {
 
         Scanner entrNumb = new Scanner(System.in);
 
-        System.out.println("Введіть параметр N");
+        System.out.println("Введіть параметр N (число > 0) ");
         if (entrNumb.hasNextInt()) {
             n = entrNumb.nextInt();
         } else {
             System.out.println("Wrong data!");
             System.exit(0);
         }
+        if (n <= 0) {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
 
-        System.out.println("Введіть параметр M");
+        System.out.println("Введіть параметр M (число > 0) ");
         if (entrNumb.hasNextInt()) {
             m = entrNumb.nextInt();
         } else {
+            System.out.println("Wrong data!");
+            System.exit(0);
+        }
+        if (m <= 0) {
             System.out.println("Wrong data!");
             System.exit(0);
         }
