@@ -1,22 +1,28 @@
 package ua.hilell.svatanenko.homework.hwLess11.Cheese;
 
 public class Cheese {
-    int age;
-    String name;
+    String bun;
+    int qttMeat;
+    String meat;
+    String meat2;
+    String cheese;
+    String green;
+    String mayo;
+    String smt;
 
-    Cheese() {
-        String bun = "bun";
-        String meat = "meat";
-        String cheese = "cheese";
-        String green = "green";
-        String mayo = "mayo";
-        int wtf = 1234;
-        System.out.println("Звичайний Бургер, складаэться з - "+bun+ ", "+meat+ ", " +cheese+", "+green+", "+mayo);
+    Cheese (String bun, String meat, String cheese, String green, String mayo ) {
+        System.out.println("Звичайний Бургер, складається з - "+bun+ ", " + meat+ ", " +cheese+", "+green+", "+mayo+".");
     }
-    Chesse (String name, int age){
 
+     Cheese (String bun, String meat, String cheese, String green) {
+        System.out.println("Дієтичний Бургер, складається з - "+bun+ ", " + meat+ ", " +cheese+", "+green+".");
     }
-    Cheese first = new Cheese();
-    first.
 
+    Cheese (String bun, String meat2, String meat, String cheese, String green, String mayo, String smt) {
+        System.out.println("Бургер з Подвійним м'ясом, складається з - "+bun+ ", " +meat2+"+" + meat+ ", " +cheese+", "+green+", "+mayo+smt+".");
+    }
+
+//    Cheese (String bun, int qttMeat, String meat, String cheese, String green, String mayo, String smt) {
+//        System.out.println("Бургер з Подвійним м'ясом, складається з - "+bun+ ", " + qttMeat+" " + meat+ ", " +cheese+", "+green+", "+mayo+smt+".");
+//    }
 }
